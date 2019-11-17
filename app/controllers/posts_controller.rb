@@ -13,8 +13,8 @@ class PostsController < ApplicationController
 
   def create
     post = Post.new
-    post.title = "Title Goes Here"
-    post.description = "Desc goes here..."
+    post.title = params[:title]
+    post.description = params[:description]
     post.save
   end
 end
